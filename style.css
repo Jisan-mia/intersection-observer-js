@@ -1,0 +1,84 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.example-project {
+  display: none;
+}
+
+#example1 {
+  height: 850px;
+  place-items: end;
+}
+
+#circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: brown;
+  border: 3px solid black;
+  justify-self: center;
+}
+
+/* example 2 */
+#example2 {
+  gap: 0.8rem
+}
+
+.square {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  background-color: brown;
+  border: 3px solid black;
+  margin: auto;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+
+.square-visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* infinity loading */
+#example3 {
+  position: relative;
+}
+
+.infinity-list li {
+  list-style-type: none;
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+  background-color: brown;
+  color: rgb(255, 255, 255);
+  padding: 2rem
+}
+
+.load-more {
+  text-align: center;
+  pointer-events: none;
+  position: relative;
+}
+
+.virtual {
+  position: absolute;
+  height: 220px;
+  top: -200px;
+  width: 100%;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.observer-controls {
+  position: sticky;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  text-align: center;
+  padding: 1rem;
+  top: 0;
+  right: 0;
+  z-index: 99
+}

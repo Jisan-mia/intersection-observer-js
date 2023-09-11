@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection Observer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Example Projects</h1>
+      <ul>
+        <li><a href="#example1">example1</a></li>
+        <li><a href="#example2">example2</a></li>
+        <li><a href="#example3">example3</a></li>
+      </ul>
+    </nav>
+
+    <section id="example1" class="example-project">
+      <div id="circle"></div>
+    </section>
+
+    <section id="example2" class="example-project">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </section>
+
+    <!-- infinity scrolling -->
+    <section id="example3" class="example-project">
+      <div class="observer-controls">
+        <button class="un-observe">Un-observe</button>
+        <button class="re-observe">Re-observe</button>
+      </div>
+      <ul class="infinity-list"></ul>
+      <div class="load-more">
+        <p class="virtual"></p>
+        loading...
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
