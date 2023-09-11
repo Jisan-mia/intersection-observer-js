@@ -68,7 +68,7 @@
         resolve(Array(number).fill('A list item'))
       }, 1000);
     }).then(data => {
-      const html = data.map(item => `<li> ${item} </li>`)
+      const html = data.map((item, idx) => `<li class='${idx}'> ${item}-${idx} {${idx%2 == 0 ? 'even' : 'odd'}} </li>`)
       list.innerHTML += html.join('');
     })
   }
@@ -77,10 +77,16 @@
   
 
   const loadElm = document.querySelector(".load-more");
-  const observer = new IntersectionObserver((entries) => {
-    if(entries[0].intersectionRatio <= 0) return;
-    loadListItems(10)
-  })    
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].intersectionRatio <= 0) return;
+      loadListItems(10);
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "0px 0px 350px 0px",
+    }
+  );    
   observer.observe(loadElm)
 
   document.querySelector('.un-observe').addEventListener('click', () => {
